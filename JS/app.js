@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // 4. Load Data from data.json
-  fetch('../JSON/data.json')
+  fetch('/JSON/data.json')
     .then(response => {
       if (!response.ok) throw new Error('Could not load data.json');
       return response.json();
