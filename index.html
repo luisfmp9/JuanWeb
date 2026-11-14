@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Juan Narro | Professional Masonry & General Construction</title>
+  <meta name="description" content="Independent masonry, concrete, brickwork, and residential construction services by Juan Narro. Licensed, reliable, and built to last." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/cssBase.css"/>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <span><i class="dot"></i> Accepting New Residential & Commercial Projects</span>
+      <div class="top-bar-links">
+        <a href="tel:+15552348910" id="top-phone">Call: (555) 234-8910</a>
+        <span class="divider">|</span>
+        <span>Free On-Site & Virtual Estimates</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="brand">
+        <div class="brand-mark">JN</div>
+        <div class="brand-text">
+          <span class="brand-name">JUAN NARRO</span>
+          <span class="brand-sub">MASONRY & CONSTRUCTION</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="#services">Services & Rates</a>
+        <a href="#standards">Why Juan Narro</a>
+        <a href="#reviews">Client Reviews</a>
+        <a href="#estimate" class="btn btn-primary btn-sm">Request Estimate</a>
+      </nav>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-grid">
+      <div class="hero-content reveal">
+        <div class="badge-silver">INDEPENDENT MASTER CRAFTSMAN</div>
+        <h1>Precision Masonry, Concrete &amp; General Construction.</h1>
+        <p class="hero-lead">
+          Structural integrity, clean finishes, and transparent upfront pricing. From custom brick and stonework to concrete flatwork and interior remodeling—done right the first time.
+        </p>
+        <div class="hero-actions">
+          <a href="#estimate" class="btn btn-primary">Get a Free Estimate</a>
+          <a href="#services" class="btn btn-outline">View Minimum Rates</a>
+        </div>
+
+        <div class="hero-metrics">
+          <div class="metric">
+            <strong>100%</strong>
+            <span>Code-Compliant Work</span>
+          </div>
+          <div class="metric-sep"></div>
+          <div class="metric">
+            <strong>Upfront</strong>
+            <span>Transparent Pricing</span>
+          </div>
+          <div class="metric-sep"></div>
+          <div class="metric">
+            <strong>Clean</strong>
+            <span>Jobsite Guarantee</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Estimate Card -->
+      <div class="hero-card reveal delay-1">
+        <div class="card-header">
+          <h3>Fast Project Inquiry</h3>
+          <p>Tell me about your project and get a response within 24 hours.</p>
+        </div>
+        <form id="quick-form" class="estimate-form">
+          <div class="form-group">
+            <label for="q-name">Full Name</label>
+            <input type="text" id="q-name" name="name" placeholder="John Doe" required />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="q-phone">Phone Number</label>
+              <input type="tel" id="q-phone" name="phone" placeholder="(555) 000-0000" required />
+            </div>
+            <div class="form-group">
+              <label for="q-zip">ZIP Code</label>
+              <input type="text" id="q-zip" name="zip" placeholder="e.g. 77001" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="q-service">Primary Service Needed</label>
+            <select id="q-service" name="service" required>
+              <option value="">Select a trade...</option>
+              <option value="Brick & Block Masonry">Brick &amp; Block Masonry (From $450)</option>
+              <option value="Concrete Driveways & Patios">Concrete Flatwork (From $650)</option>
+              <option value="Stone Veneer & Facades">Natural / Cultured Stone (From $550)</option>
+              <option value="Tile & Flooring">Porcelain &amp; Ceramic Tile (From $350)</option>
+              <option value="Framing & Drywall">Framing &amp; Drywall (From $250)</option>
+              <option value="General Remodeling">General Construction (From $500)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="q-details">Brief Project Description</label>
+            <textarea id="q-details" name="details" rows="3" placeholder="Approximate dimensions, materials, or repair details..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Submit Quote Request</button>
+          <p class="form-note" id="form-feedback"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services & Minimum Rates Section -->
+  <section id="services" class="section section-light">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">TRANSPARENT PRICING</span>
+        <h2>Core Services &amp; Starting Rates</h2>
+        <p>
+          Every project is unique, and final quotes depend on square footage, material selection, and site preparation. Below are our standard minimum service rates in the U.S.
+        </p>
+      </div>
+
+      <!-- Services injected via app.js from data.json -->
+      <div class="services-grid" id="services-grid"></div>
+
+      <div class="pricing-disclaimer reveal">
+        <strong>Note on Pricing:</strong> Listed prices represent minimum labor/service call thresholds for standard residential jobs. Materials and complex structural engineering are itemized separately in your written estimate.
+      </div>
+    </div>
+  </section>
+
+  <!-- Standards / Value Proposition -->
+  <section id="standards" class="section section-dark">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow eyebrow-silver">PROFESSIONAL STANDARDS</span>
+        <h2>Built on Discipline, Accuracy &amp; Trust</h2>
+        <p>Working directly with an independent specialist means no middlemen markups and direct accountability on every square foot.</p>
+      </div>
+
+      <div class="standards-grid">
+        <div class="standard-item reveal">
+          <div class="standard-num">01</div>
+          <h3>Direct Craftsman Accountability</h3>
+          <p>You deal directly with Juan Narro from the initial site inspection to the final walkthrough—no miscommunication between sales reps and crews.</p>
+        </div>
+        <div class="standard-item reveal delay-1">
+          <div class="standard-num">02</div>
+          <h3>Structural Durability</h3>
+          <p>Proper footing depth, moisture barriers, rebar reinforcement, and exact mortar ratios ensure your masonry and concrete resist shifting and weather.</p>
+        </div>
+        <div class="standard-item reveal delay-2">
+          <div class="standard-num">03</div>
+          <h3>Clear Written Scope</h3>
+          <p>Before a single tool is lifted, you receive a clear breakdown of timelines, materials, and fixed labor costs with zero hidden fees.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="reviews" class="section section-silver">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">CLIENT FEEDBACK</span>
+        <h2>Trusted by Homeowners &amp; Property Managers</h2>
+      </div>
+      <div class="testimonials-grid" id="testimonials-grid"></div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA Banner -->
+  <section id="estimate" class="cta-banner">
+    <div class="container cta-inner reveal">
+      <div>
+        <h2>Ready to Start Your Construction or Masonry Project?</h2>
+        <p>Contact Juan Narro directly for an honest assessment and competitive quote.</p>
+      </div>
+      <div class="cta-buttons">
+        <a href="tel:+15552348910" class="btn btn-silver">Call (555) 234-8910</a>
+        <a href="#quick-form" class="btn btn-primary">Request Online Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="brand">
+          <div class="brand-mark">JN</div>
+          <div class="brand-text">
+            <span class="brand-name">JUAN NARRO</span>
+            <span class="brand-sub">MASONRY &amp; CONSTRUCTION</span>
+          </div>
+        </div>
+        <p class="footer-desc">
+          Independent masonry, concrete, tile, and residential construction services committed to structural excellence across the United States.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#services">Services &amp; Rates</a></li>
+          <li><a href="#standards">Quality Standards</a></li>
+          <li><a href="#reviews">Client Reviews</a></li>
+          <li><a href="#estimate">Request Estimate</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="terms.html">Terms of Use</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Direct Contact</h4>
+        <ul>
+          <li><a href="mailto:contact@juannarro.com">contact@juannarro.com</a></li>
+          <li><a href="tel:+15552348910">+1 (555) 234-8910</a></li>
+          <li>Mon – Sat: 7:00 AM – 6:00 PM</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2026 Juan Narro (juannarro.com). All rights reserved.</p>
+        <p class="dev-credit">
+          Developed by <strong>Filo Games</strong> &bull; &copy; 2026 Filo Games. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="JS/app.js"></script>
+</body>
+</html>

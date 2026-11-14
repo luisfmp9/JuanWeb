@@ -1,0 +1,84 @@
+{
+  "company": {
+    "name": "Juan Narro",
+    "brand": "JUAN NARRO CONSTRUCTION",
+    "domain": "juannarro.com",
+    "phone": "+1 (555) 234-8910",
+    "phoneRaw": "15552348910",
+    "email": "contact@juannarro.com",
+    "serviceArea": "Residential & Light Commercial Services • USA"
+  },
+  "services": [
+    {
+      "id": "brick-masonry",
+      "category": "Masonry",
+      "title": "Brick & Block Masonry",
+      "description": "Structural brick laying, cinder block walls, retaining walls, and mortar joint repointing built to code.",
+      "minPrice": "$450",
+      "unit": "minimum service",
+      "features": ["Structural & Decorative", "Tuckpointing & Repair", "Weather-Resistant Finish"]
+    },
+    {
+      "id": "concrete-flatwork",
+      "category": "Concrete",
+      "title": "Concrete Driveways & Patios",
+      "description": "Poured concrete slabs, walkways, steps, and foundational pads with reinforced rebar and precision leveling.",
+      "minPrice": "$650",
+      "unit": "minimum service",
+      "features": ["Broom or Smooth Finish", "Crack & Spall Repair", "High-PSI Mix"]
+    },
+    {
+      "id": "stone-veneer",
+      "category": "Stonework",
+      "title": "Natural & Cultured Stone",
+      "description": "Exterior facades, fireplace surrounds, and architectural stone accents that elevate property value.",
+      "minPrice": "$550",
+      "unit": "minimum service",
+      "features": ["Interior & Exterior", "Custom Fireplace Facades", "Precision Moisture Barrier"]
+    },
+    {
+      "id": "tile-flooring",
+      "category": "Surfaces",
+      "title": "Porcelain, Ceramic & Tile",
+      "description": "Precision installation for kitchens, bathrooms, entryways, and heavy-traffic commercial floors.",
+      "minPrice": "$350",
+      "unit": "minimum service",
+      "features": ["Waterproof Subflooring", "Large-Format Tile", "Clean Grout Lines"]
+    },
+    {
+      "id": "drywall-framing",
+      "category": "Interior Build",
+      "title": "Framing, Drywall & Plaster",
+      "description": "Metal and wood stud framing, drywall hanging, taping, texture matching, and structural patching.",
+      "minPrice": "$250",
+      "unit": "minimum service",
+      "features": ["Level 5 Smooth Finish", "Water Damage Restoration", "Partition Walls"]
+    },
+    {
+      "id": "general-remodeling",
+      "category": "Renovation",
+      "title": "General Construction & Remodeling",
+      "description": "Complete structural upgrades, exterior siding repairs, garage conversions, and punch-list execution.",
+      "minPrice": "$500",
+      "unit": "minimum service",
+      "features": ["Code-Compliant Work", "On-Time Milestones", "Clean Jobsite Guarantee"]
+    }
+  ],
+  "testimonials": [
+    {
+      "author": "Michael Vance",
+      "role": "Homeowner",
+      "text": "Juan rebuilt our front brick steps and repaired a retaining wall. Clean lines, rock-solid work, and zero mess left behind."
+    },
+    {
+      "author": "Sarah Jenkins",
+      "role": "Property Manager",
+      "text": "Reliable contractors are hard to find. Juan gave a transparent estimate, showed up on schedule, and nailed the concrete patio pour."
+    },
+    {
+      "author": "David Thorne",
+      "role": "Real Estate Investor",
+      "text": "We hire Juan for masonry, tile, and framing across our flip properties. High structural standards and fair pricing."
+    }
+  ]
+}
