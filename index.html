@@ -167,7 +167,14 @@
           </address>
         </article>
 
-        <form id="quick-form" class="estimate-card reveal delay-1">
+        <form id="quick-form" action="https://api.web3forms.com/submit" method="POST" class="estimate-card reveal delay-1">
+  
+          <!-- Configuración obligatoria de Web3Forms -->
+          <input type="hidden" name="access_key" value="65c2d480-c693-4add-94f6-7e6bb1ce938d">
+          <input type="hidden" name="subject" value="Nuevo mensaje de cotización - Juan Narro Construction">
+          <input type="hidden" name="redirect" value="https://luisfmp9.github.io/JuanWeb/thanks">
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
           <header class="card-header">
             <h3>Project Inquiry Form</h3>
             <p>Expect a direct response within 24 business hours.</p>

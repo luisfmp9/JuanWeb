@@ -115,12 +115,14 @@ document.addEventListener('DOMContentLoaded', () => {
     `).join('');
   }
 
-  // 5. Form Submission -> Redirects to thanks.html
+  // 5. Visual feedback on submit (Web3Forms handles actual POST & redirect)
   if (quickForm) {
-    quickForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const name = encodeURIComponent(document.getElementById('q-name').value.trim());
-      window.location.href = `thanks.html?name=${name}`;
+    quickForm.addEventListener('submit', () => {
+      const submitBtn = quickForm.querySelector('button[type="submit"]');
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending Request...';
+      }
     });
   }
 });

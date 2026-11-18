@@ -227,7 +227,7 @@ fieldset {
   border-color: var(--white);
 }
 
-/* Hero Section (Centered & Clean) */
+/* Hero Section (Optimizado para mostrar botones y métricas sin scroll) */
 .hero {
   position: relative;
   background: radial-gradient(circle at top center, #18365e 0%, var(--navy-dark) 55%, var(--black) 100%);
@@ -236,7 +236,7 @@ fieldset {
     linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   background-size: cover, 40px 40px, 40px 40px;
   color: var(--white);
-  padding: 6.5rem 0 5.5rem;
+  padding: 4.5rem 0 3.5rem; /* Reducido para ganar espacio vertical */
   text-align: center;
 }
 
@@ -247,29 +247,29 @@ fieldset {
 
 .badge-silver {
   display: inline-block;
-  padding: 0.38rem 0.95rem;
+  padding: 0.3rem 0.85rem;
   background: rgba(216, 222, 232, 0.12);
   border: 1px solid rgba(216, 222, 232, 0.3);
   color: var(--silver-mid);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   border-radius: 4px;
-  margin-bottom: 1.4rem;
+  margin-bottom: 1rem;
 }
 
 .hero h1 {
-  font-size: clamp(2.35rem, 4.5vw, 3.65rem);
+  font-size: clamp(2.1rem, 4vw, 3.3rem);
   font-weight: 800;
   line-height: 1.14;
-  margin-bottom: 1.35rem;
+  margin-bottom: 1rem;
   color: var(--white);
 }
 
 .hero-lead {
-  font-size: 1.12rem;
+  font-size: 1.05rem;
   color: var(--silver-mid);
-  margin: 0 auto 2.25rem;
+  margin: 0 auto 1.75rem;
   max-width: 650px;
 }
 
@@ -278,7 +278,7 @@ fieldset {
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
-  margin-bottom: 3.5rem;
+  margin-bottom: 2.25rem; /* Subido para encajar en el primer pantallazo */
 }
 
 .hero-metrics {
@@ -287,7 +287,7 @@ fieldset {
   align-items: center;
   gap: 2.5rem;
   flex-wrap: wrap;
-  padding-top: 2rem;
+  padding-top: 1.5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
