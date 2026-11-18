@@ -5,10 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuToggle = document.getElementById('menu-toggle');
   const navLinks = document.getElementById('nav-links');
   const quickForm = document.getElementById('quick-form');
-  const formFeedback = document.getElementById('form-feedback');
   const serviceSelect = document.getElementById('q-service');
 
-  // 1. Sticky Navbar Shadow on Scroll
+  // 1. Sticky Navbar Shadow
   window.addEventListener('scroll', () => {
     if (window.scrollY > 30) {
       navbar.classList.add('scrolled');
@@ -18,16 +17,14 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // 2. Mobile Navigation Toggle
-  menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
-  });
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', isOpen);
+    });
+  }
 
-  // 3. Intersection Observer for Smooth Scroll Reveals
-  const observerOptions = {
-    threshold: 0.12,
-    rootMargin: '0px 0px -40px 0px'
-  };
-
+  // 3. Smooth Scroll Reveal Observer
   const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -35,68 +32,69 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.unobserve(entry.target);
       }
     });
-  }, observerOptions);
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
   const initRevealElements = () => {
-    document.querySelectorAll('.reveal').forEach(el => {
-      revealObserver.observe(el);
-    });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
   };
 
-  // 4. Load Data from data.json
-  fetch('JSON/data.json')
-    .then(response => {
-      if (!response.ok) throw new Error('Could not load data.json');
-      return response.json();
-    })
-    .then(data => {
-      renderServices(data.services);
-      renderTestimonials(data.testimonials);
-      initRevealElements();
-    })
-    .catch(err => {
-      console.error('Data load error:', err);
-      initRevealElements();
-    });
+  // 4. Load Services & Testimonials from JSON/data.json
+  if (servicesGrid || testimonialsGrid) {
+    fetch('JSON/data.json')
+      .then(response => {
+        if (!response.ok) throw new Error('Could not load data.json');
+        return response.json();
+      })
+      .then(data => {
+        renderServices(data.services);
+        renderTestimonials(data.testimonials);
+        initRevealElements();
+      })
+      .catch(err => {
+        console.error('Data load error:', err);
+        initRevealElements();
+      });
+  } else {
+    initRevealElements();
+  }
 
   function renderServices(services) {
     if (!servicesGrid || !services) return;
     servicesGrid.innerHTML = services.map((service, index) => `
       <article class="service-card reveal" style="transition-delay: ${(index % 3) * 0.1}s">
-        <div>
+        <header>
           <span class="service-cat">${service.category}</span>
           <h3>${service.title}</h3>
           <p>${service.description}</p>
           <ul class="service-features">
             ${service.features.map(feat => `<li>${feat}</li>`).join('')}
           </ul>
-        </div>
-        <div class="service-price-box">
-          <div>
+        </header>
+        <footer class="service-price-box">
+          <p>
             <span class="price-label">Starting at</span>
-            <span class="price-value">${service.minPrice}</span>
-          </div>
+            <strong class="price-value">${service.minPrice}</strong>
+          </p>
           <button type="button" class="btn-select-service" data-service="${service.title}">
             Select Service
           </button>
-        </div>
+        </footer>
       </article>
     `).join('');
 
-    // Attach click handlers to pre-fill form when user clicks "Select Service"
     document.querySelectorAll('.btn-select-service').forEach(btn => {
       btn.addEventListener('click', () => {
         const chosen = btn.getAttribute('data-service');
         if (serviceSelect) {
-          for (let option of serviceSelect.options) {
+          for (const option of serviceSelect.options) {
             if (option.value.toLowerCase().includes(chosen.split(' ')[0].toLowerCase())) {
               serviceSelect.value = option.value;
               break;
             }
           }
         }
-        document.getElementById('quick-form').scrollIntoView({ behavior: 'smooth', block: 'center' });
-        document.getElementById('q-name').focus();
+        document.getElementById('estimate').scrollIntoView({ behavior: 'smooth' });
+        setTimeout(() => document.getElementById('q-name').focus(), 500);
       });
     });
   }
@@ -104,26 +102,25 @@ document.addEventListener('DOMContentLoaded', () => {
   function renderTestimonials(testimonials) {
     if (!testimonialsGrid || !testimonials) return;
     testimonialsGrid.innerHTML = testimonials.map((item, index) => `
-      <div class="testimonial-card reveal" style="transition-delay: ${index * 0.12}s">
-        <div class="stars">★★★★★</div>
-        <p>"${item.text}"</p>
-        <div class="testimonial-author">
+      <figure class="testimonial-card reveal" style="transition-delay: ${index * 0.12}s">
+        <div>
+          <p class="stars" aria-label="5 out of 5 stars">★★★★★</p>
+          <blockquote>"${item.text}"</blockquote>
+        </div>
+        <figcaption class="testimonial-author">
           <strong>${item.author}</strong>
           <span>${item.role}</span>
-        </div>
-      </div>
+        </figcaption>
+      </figure>
     `).join('');
   }
 
-  // 5. Form Submission Handler (Ready to connect to Formspree, Web3Forms, or EmailJS)
+  // 5. Form Submission -> Redirects to thanks.html
   if (quickForm) {
     quickForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const name = document.getElementById('q-name').value.trim();
-      const service = serviceSelect.value || 'Construction Inquiry';
-      
-      formFeedback.textContent = `Thank you, ${name}. Your request for ${service} has been prepared. Juan Narro will contact you shortly.`;
-      quickForm.reset();
+      const name = encodeURIComponent(document.getElementById('q-name').value.trim());
+      window.location.href = `thanks.html?name=${name}`;
     });
   }
 });

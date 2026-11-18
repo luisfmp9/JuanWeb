@@ -1,0 +1,6 @@
+# Le decimos a todos los robots que pueden rastrear el sitio completo.
+User-agent: *
+Allow: /
+
+# Le indicamos a los robots dónde encontrar el mapa del sitio para una indexación más rápida.
+Sitemap: https://www.juannarro.com/sitemap.xml
