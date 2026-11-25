@@ -1,12 +1,12 @@
 {
   "company": {
-    "name": "Juan Narro",
-    "brand": "JUAN NARRO CONSTRUCTION",
-    "domain": "juannarro.com",
-    "phone": "+1 (555) 234-8910",
-    "phoneRaw": "15552348910",
-    "email": "contact@juannarro.com",
-    "serviceArea": "Residential & Light Commercial Services • USA"
+    "name": "Juan Narro LLC",
+    "brand": "JUAN NARRO LLC",
+    "domain": "juannarrollc.com",
+    "phone": "+1 (720) 244-1802",
+    "phoneRaw": "17202441802",
+    "email": "info@juannarrollc.com",
+    "serviceArea": "Denver Metro & Surrounding Front Range Communities • USA"
   },
   "services": [
     {
