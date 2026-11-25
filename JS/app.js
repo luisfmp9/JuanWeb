@@ -90,20 +90,25 @@ document.addEventListener('DOMContentLoaded', () => {
       // Limpiamos la clase por si acaso
       cards.forEach(card => card.classList.remove('is-centered-orphan'));
 
-      // Comparamos la posición vertical (fila) de la última tarjeta con la anterior
-      if (cards.length >= 2) {
+      // Damos un pequeño respiro para que el navegador calcule bien las alturas de las tarjetas
+      setTimeout(() => {
+        if (cards.length < 2) return;
+        
         const lastCard = cards[cards.length - 1];
-        const prevCard = cards[cards.length - 2];
+        
+        // Verificamos si la última tarjeta está en una posición vertical (top) mayor que la tarjeta anterior
+        // Esto indica 100% seguro que bajó sola a una nueva fila, sin importar las alturas de los textos.
+        const lastCardTop = lastCard.getBoundingClientRect().top;
+        const prevCardTop = cards[cards.length - 2].getBoundingClientRect().top;
 
-        // Si están a distinta altura y hay más de 1 columna en pantalla, quedó sola en su fila
-        const isMultiColumn = cards[0].offsetTop === cards[1].offsetTop;
-        if (isMultiColumn && lastCard.offsetTop > prevCard.offsetTop) {
+        // Si la última está más abajo, significa que es un elemento huérfano en la última fila
+        if (lastCardTop > prevCardTop + 10) {
           lastCard.classList.add('is-centered-orphan');
         }
-      }
+      }, 50);
     };
 
-    // Lo ejecutamos al cargar y también si el usuario cambia el tamaño de la ventana
+    // Lo ejecutamos al cargar, tras un pequeño delay, y al cambiar el tamaño de ventana
     adjustOrphanCards();
     window.addEventListener('resize', adjustOrphanCards);
 
