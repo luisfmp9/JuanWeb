@@ -1027,7 +1027,7 @@ fieldset {
   font-size: 1.35rem;
   color: var(--blue-accent);
   font-weight: 700;
-  transition: transform 0.3s ease;
+  transition: transform 0.6s ease;
 }
 
 .faq-item[open] summary::after {
@@ -1042,7 +1042,7 @@ fieldset {
   border-top: 1px solid var(--border-light);
   color: var(--text-muted);
   font-size: 0.93rem;
-  animation: fadeInFAQ 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  animation: fadeInFAQ 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 @keyframes fadeInFAQ {
