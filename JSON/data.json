@@ -10,55 +10,91 @@
   },
   "services": [
     {
-      "id": "brick-masonry",
-      "category": "Masonry",
-      "title": "Brick & Block Masonry",
-      "description": "Structural brick laying, cinder block walls, retaining walls, and mortar joint repointing built to code.",
+      "id": "drywall",
+      "category": "Drywall",
+      "title": "Drywall",
+      "description": "Patching holes, fixing cracks and ceiling drywall, taping, texture matching, full wall installation, and new drywall installation.",
       "minPrice": "$450",
       "unit": "minimum service",
-      "features": ["Structural & Decorative", "Tuckpointing & Repair", "Weather-Resistant Finish"]
+      "features": ["Seamless Texture Matching", "Ceiling & Wall Patching", "Priming & Paint-Ready"]
     },
     {
-      "id": "concrete-flatwork",
-      "category": "Concrete",
-      "title": "Concrete Driveways & Patios",
-      "description": "Poured concrete slabs, walkways, steps, and foundational pads with reinforced rebar and precision leveling.",
+      "id": "painting-caulking",
+      "category": "Painting & Caulking",
+      "title": "Painting & Caulking",
+      "description": "Interior and exterior painting, room touch-ups, trim and baseboard painting, furniture moving as needed, and caulking/sealing for bathrooms, kitchens, windows, and siding gaps.",
       "minPrice": "$650",
       "unit": "minimum service",
-      "features": ["Broom or Smooth Finish", "Crack & Spall Repair", "High-PSI Mix"]
+      "features": ["Full Make-Ready Prep", "Wall, Floor & Counter Repairs", "Deep Move-Out Cleaning"]
     },
     {
-      "id": "stone-veneer",
-      "category": "Stonework",
-      "title": "Natural & Cultured Stone",
-      "description": "Exterior facades, fireplace surrounds, and architectural stone accents that elevate property value.",
+      "id": "Cleaning & Move-Out Turnovers",
+      "category": "Cleaning & Move-Out Turnovers",
+      "title": "Cleaning & Move-Out Turnovers",
+      "description": "Deep cleaning, move-out cleaning, and apartment turnover/make-ready work, including repairing damaged walls, floors, or countertops, cleaning thoroughly, and getting the unit ready for the next tenants.",
       "minPrice": "$550",
       "unit": "minimum service",
-      "features": ["Interior & Exterior", "Custom Fireplace Facades", "Precision Moisture Barrier"]
+      "features": ["Full Make-Ready Prep", "Wall, Floor & Counter Repairs", "Deep Move-Out Cleaning"]
     },
     {
-      "id": "tile-flooring",
-      "category": "Surfaces",
-      "title": "Porcelain, Ceramic & Tile",
-      "description": "Precision installation for kitchens, bathrooms, entryways, and heavy-traffic commercial floors.",
+      "id": "Fence Work",
+      "category": "Fence Work",
+      "title": "Fence Work",
+      "description": "Wood and vinyl fence repairs, gate adjustments, replacing damaged sections, fence cleaning, and staining.",
       "minPrice": "$350",
       "unit": "minimum service",
-      "features": ["Waterproof Subflooring", "Large-Format Tile", "Clean Grout Lines"]
+      "features": ["Wood & Vinyl Repairs", "Gate Alignment & Hardware", "Cleaning & Weather Staining"]
     },
     {
-      "id": "drywall-framing",
-      "category": "Interior Build",
-      "title": "Framing, Drywall & Plaster",
-      "description": "Metal and wood stud framing, drywall hanging, taping, texture matching, and structural patching.",
-      "minPrice": "$250",
+      "id": "Doors & Windows",
+      "category": "Doors & Windows",
+      "title": "Doors & Windows",
+      "description": "Door repairs, frame/jamb and hardware fixes, hinge adjustments, lock and handle installation, door and window replacement, attic doors, and screen repair or replacement.",
+      "minPrice": "$270",
       "unit": "minimum service",
       "features": ["Level 5 Smooth Finish", "Water Damage Restoration", "Partition Walls"]
     },
     {
-      "id": "general-remodeling",
-      "category": "Renovation",
-      "title": "General Construction & Remodeling",
-      "description": "Complete structural upgrades, exterior siding repairs, garage conversions, and punch-list execution.",
+      "id": "Carpentry, Trim & Shelving",
+      "category": "Carpentry, Trim & Shelving",
+      "title": "Carpentry, Trim & Shelving",
+      "description": "Baseboards, door and window casing, crown molding, chair rails, wainscoting, faux beams, stair trim, cabinet/shelving installation and repair, and furniture assembly or TV/shelf/curtain mounting.",
+      "minPrice": "$500",
+      "unit": "minimum service",
+      "features": ["Code-Compliant Work", "On-Time Milestones", "Clean Jobsite Guarantee"]
+    },
+    {
+      "id": "Gutters & Exterior / Yard",
+      "category": "Gutters & Exterior / Yard",
+      "title": "Gutters & Exterior / Yard",
+      "description": "Gutter cleaning, leak repair, downspout adjustments, gutter installation, deck board/railing/stair repairs, deck staining and sealing, siding repairs (wood, fiber cement/hardy, vinyl, brick, stucco), lawn mowing, leaf blowing, and yard cleanup.",
+      "minPrice": "$500",
+      "unit": "minimum service",
+      "features": ["Code-Compliant Work", "On-Time Milestones", "Clean Jobsite Guarantee"]
+    },
+    {
+      "id": "Electrical & Plumbing",
+      "category": "Electrical & Plumbing",
+      "title": "Electrical & Plumbing",
+      "description": "Light fixtures, ceiling fans, chandeliers, outlets, switches, smoke detectors, smart home device setup, faucet swaps, leaky under-sink pipes, toilet repairs, and garbage disposals.",
+      "minPrice": "$500",
+      "unit": "minimum service",
+      "features": ["Code-Compliant Work", "On-Time Milestones", "Clean Jobsite Guarantee"]
+    },
+    {
+      "id": "Flooring & Garage",
+      "category": "Flooring & Garage",
+      "title": "Flooring & Garage",
+      "description": "Installation of wood, laminate, tile (porcelain, ceramic, stone, marble), and garage door, opener, and storage/organization setup.",
+      "minPrice": "$500",
+      "unit": "minimum service",
+      "features": ["Code-Compliant Work", "On-Time Milestones", "Clean Jobsite Guarantee"]
+    },
+    {
+      "id": "Commercial Maintenance",
+      "category": "Commercial Maintenance",
+      "title": "Commercial Maintenance",
+      "description": "Repairs and maintenance for retail, office, and restaurant spaces—including walls, ceilings, flooring, tile, trim, lighting, and scheduling options around business hours to limit disruption.",
       "minPrice": "$500",
       "unit": "minimum service",
       "features": ["Code-Compliant Work", "On-Time Milestones", "Clean Jobsite Guarantee"]
