@@ -426,6 +426,14 @@ fieldset {
   margin-bottom: 1.25rem;
 }
 
+/* Tarjeta sobrante alineada y centrada automáticamente */
+.service-card.is-centered-orphan {
+  grid-column: 1 / -1;
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
+}
+
 .service-features {
   list-style: none;
   margin-bottom: 1.5rem;

@@ -82,6 +82,31 @@ document.addEventListener('DOMContentLoaded', () => {
       </article>
     `).join('');
 
+    // --- CENTRAR AUTOMÁTICAMENTE LA ÚLTIMA TARJETA SI QUEDA SOLA ---
+    const adjustOrphanCards = () => {
+      const cards = servicesGrid.querySelectorAll('.service-card');
+      if (cards.length === 0) return;
+
+      // Limpiamos la clase por si acaso
+      cards.forEach(card => card.classList.remove('is-centered-orphan'));
+
+      // Medimos cuántas columnas tiene el grid en este momento exacto
+      const computedStyle = window.getComputedStyle(servicesGrid);
+      const columnsTemplate = computedStyle.getPropertyValue('grid-template-columns');
+      const columnsCount = columnsTemplate.split(' ').length;
+
+      // Vemos si sobra 1 sola tarjeta en la última fila
+      const remainder = cards.length % columnsCount;
+      if (remainder === 1) {
+        const lastCard = cards[cards.length - 1];
+        lastCard.classList.add('is-centered-orphan');
+      }
+    };
+
+    // Lo ejecutamos al cargar y también si el usuario cambia el tamaño de la ventana
+    adjustOrphanCards();
+    window.addEventListener('resize', adjustOrphanCards);
+
     document.querySelectorAll('.btn-select-service').forEach(btn => {
       btn.addEventListener('click', () => {
         const chosen = btn.getAttribute('data-service');
