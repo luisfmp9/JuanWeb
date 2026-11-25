@@ -975,7 +975,7 @@ fieldset {
   font-weight: 600;
 }
 
-/* FAQ Accordion */
+/* FAQ Accordion Mejorado y Suave */
 .faq-list {
   max-width: 820px;
   margin: 0 auto;
@@ -1019,18 +1019,33 @@ fieldset {
   font-size: 1.35rem;
   color: var(--blue-accent);
   font-weight: 700;
+  transition: transform 0.3s ease;
 }
 
 .faq-item[open] summary::after {
   content: '−';
+  transform: rotate(180deg);
 }
 
+/* Animación de apertura suave para el contenido */
 .faq-item p {
   margin-top: 0.85rem;
   padding-top: 0.85rem;
   border-top: 1px solid var(--border-light);
   color: var(--text-muted);
   font-size: 0.93rem;
+  animation: fadeInFAQ 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes fadeInFAQ {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 960px) {
