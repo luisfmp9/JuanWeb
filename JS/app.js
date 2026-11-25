@@ -90,16 +90,16 @@ document.addEventListener('DOMContentLoaded', () => {
       // Limpiamos la clase por si acaso
       cards.forEach(card => card.classList.remove('is-centered-orphan'));
 
-      // Medimos cuántas columnas tiene el grid en este momento exacto
-      const computedStyle = window.getComputedStyle(servicesGrid);
-      const columnsTemplate = computedStyle.getPropertyValue('grid-template-columns');
-      const columnsCount = columnsTemplate.split(' ').length;
-
-      // Vemos si sobra 1 sola tarjeta en la última fila
-      const remainder = cards.length % columnsCount;
-      if (remainder === 1) {
+      // Comparamos la posición vertical (fila) de la última tarjeta con la anterior
+      if (cards.length >= 2) {
         const lastCard = cards[cards.length - 1];
-        lastCard.classList.add('is-centered-orphan');
+        const prevCard = cards[cards.length - 2];
+
+        // Si están a distinta altura y hay más de 1 columna en pantalla, quedó sola en su fila
+        const isMultiColumn = cards[0].offsetTop === cards[1].offsetTop;
+        if (isMultiColumn && lastCard.offsetTop > prevCard.offsetTop) {
+          lastCard.classList.add('is-centered-orphan');
+        }
       }
     };
 
