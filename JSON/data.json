@@ -14,7 +14,7 @@
       "category": "Drywall",
       "title": "Drywall",
       "description": "Patching holes, fixing cracks and ceiling drywall, taping, texture matching, full wall installation, and new drywall installation.",
-      "minPrice": "$450",
+      "minPrice": "$270",
       "unit": "minimum service",
       "features": ["Seamless Texture Matching", "Ceiling & Wall Patching", "Priming & Paint-Ready"]
     },
@@ -23,16 +23,7 @@
       "category": "Painting & Caulking",
       "title": "Painting & Caulking",
       "description": "Interior and exterior painting, room touch-ups, trim and baseboard painting, furniture moving as needed, and caulking/sealing for bathrooms, kitchens, windows, and siding gaps.",
-      "minPrice": "$650",
-      "unit": "minimum service",
-      "features": ["Full Make-Ready Prep", "Wall, Floor & Counter Repairs", "Deep Move-Out Cleaning"]
-    },
-    {
-      "id": "Cleaning & Move-Out Turnovers",
-      "category": "Cleaning & Move-Out Turnovers",
-      "title": "Cleaning & Move-Out Turnovers",
-      "description": "Deep cleaning, move-out cleaning, and apartment turnover/make-ready work, including repairing damaged walls, floors, or countertops, cleaning thoroughly, and getting the unit ready for the next tenants.",
-      "minPrice": "$550",
+      "minPrice": "$270",
       "unit": "minimum service",
       "features": ["Full Make-Ready Prep", "Wall, Floor & Counter Repairs", "Deep Move-Out Cleaning"]
     },
@@ -41,7 +32,7 @@
       "category": "Fence Work",
       "title": "Fence Work",
       "description": "Wood and vinyl fence repairs, gate adjustments, replacing damaged sections, fence cleaning, and staining.",
-      "minPrice": "$350",
+      "minPrice": "$270",
       "unit": "minimum service",
       "features": ["Wood & Vinyl Repairs", "Gate Alignment & Hardware", "Cleaning & Weather Staining"]
     },
@@ -59,7 +50,7 @@
       "category": "Carpentry, Trim & Shelving",
       "title": "Carpentry, Trim & Shelving",
       "description": "Baseboards, door and window casing, crown molding, chair rails, wainscoting, faux beams, stair trim, cabinet/shelving installation and repair, and furniture assembly or TV/shelf/curtain mounting.",
-      "minPrice": "$500",
+      "minPrice": "$270",
       "unit": "minimum service",
       "features": ["Code-Compliant Work", "On-Time Milestones", "Clean Jobsite Guarantee"]
     },
@@ -68,7 +59,7 @@
       "category": "Gutters & Exterior / Yard",
       "title": "Gutters & Exterior / Yard",
       "description": "Gutter cleaning, leak repair, downspout adjustments, gutter installation, deck board/railing/stair repairs, deck staining and sealing, siding repairs (wood, fiber cement/hardy, vinyl, brick, stucco), lawn mowing, leaf blowing, and yard cleanup.",
-      "minPrice": "$500",
+      "minPrice": "$270",
       "unit": "minimum service",
       "features": ["Code-Compliant Work", "On-Time Milestones", "Clean Jobsite Guarantee"]
     },
@@ -86,7 +77,7 @@
       "category": "Flooring & Garage",
       "title": "Flooring & Garage",
       "description": "Installation of wood, laminate, tile (porcelain, ceramic, stone, marble), and garage door, opener, and storage/organization setup.",
-      "minPrice": "$500",
+      "minPrice": "$800",
       "unit": "minimum service",
       "features": ["Code-Compliant Work", "On-Time Milestones", "Clean Jobsite Guarantee"]
     },
@@ -98,6 +89,15 @@
       "minPrice": "$500",
       "unit": "minimum service",
       "features": ["Code-Compliant Work", "On-Time Milestones", "Clean Jobsite Guarantee"]
+    },
+    {
+      "id": "Cleaning & Move-Out Turnovers",
+      "category": "Cleaning & Move-Out Turnovers",
+      "title": "Cleaning & Move-Out Turnovers",
+      "description": "Deep cleaning, move-out cleaning, and apartment turnover/make-ready work, including repairing damaged walls, floors, or countertops, cleaning thoroughly, and getting the unit ready for the next tenants.",
+      "minPrice": "$4000",
+      "unit": "minimum service",
+      "features": ["Full Make-Ready Prep", "Wall, Floor & Counter Repairs", "Deep Move-Out Cleaning"]
     }
   ],
   "testimonials": [
