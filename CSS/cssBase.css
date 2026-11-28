@@ -983,6 +983,31 @@ fieldset {
   font-weight: 600;
 }
 
+/* Transición fluida para las barras del menú hamburguesa */
+.menu-toggle span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: var(--navy-dark);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Animación a forma de "X" cuando el menú está abierto (clase .open que controla JS) */
+.menu-toggle.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Animación de despliegue suave para el contenedor de enlaces móviles */
+.nav-links {
+  transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
 /* FAQ Accordion con transición de apertura suave */
 .faq-list {
   max-width: 820px;
@@ -1053,6 +1078,111 @@ fieldset {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Recent Projects Gallery Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 1.75rem;
+}
+
+.project-card {
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--silver-mid);
+}
+
+.project-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  background-color: var(--navy-dark);
+  overflow: hidden;
+}
+
+.project-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.project-card:hover .project-img-wrap img {
+  transform: scale(1.05);
+}
+
+.project-year {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: rgba(9, 13, 20, 0.85);
+  backdrop-filter: blur(6px);
+  color: var(--white);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 0.3rem 0.75rem;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.project-body {
+  padding: 1.5rem;
+}
+
+.project-body h3 {
+  font-size: 1.12rem;
+  color: var(--navy-dark);
+  margin-bottom: 0.45rem;
+}
+
+.project-body p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.service-card.is-centered-orphan,
+.project-card.is-centered-orphan {
+  grid-column: 1 / -1 !important;
+  max-width: 600px !important;
+  margin: 0 auto !important;
+  width: 100% !important;
+}
+
+/* Por defecto en escritorio: ocultamos los enlaces puramente informativos secundarios de la barra superior */
+.nav-links .mobile-only-link {
+  display: none;
+}
+
+/* Cuando se despliega el menú en dispositivos móviles o tablets, los mostramos ordenados */
+@media (max-width: 768px) {
+  .nav-links .mobile-only-link {
+    display: block;
+  }
+  
+  .nav-links {
+    gap: 1rem !important;
+  }
+  
+  .nav-links a:not(.btn) {
+    padding: 0.4rem 0;
+    border-bottom: 1px solid var(--border-light);
+    width: 100%;
   }
 }
 

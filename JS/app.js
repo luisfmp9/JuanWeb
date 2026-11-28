@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     menuToggle.addEventListener('click', () => {
       const isOpen = navLinks.classList.toggle('open');
       menuToggle.setAttribute('aria-expanded', isOpen);
+      menuToggle.classList.toggle('open', isOpen); // Añade/quita la animación de la X
     });
   }
 
@@ -155,4 +156,18 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // 6. Animación continua para las FAQ cada vez que se abren
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.addEventListener('toggle', () => {
+      if (item.open) {
+        const p = item.querySelector('p');
+        if (p) {
+          p.style.animation = 'none';
+          p.offsetHeight; // Truco para reiniciar el render del navegador (reflow)
+          p.style.animation = 'fadeInFAQ 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards';
+        }
+      }
+    });
+  });
 });
